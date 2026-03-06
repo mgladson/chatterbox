@@ -46,6 +46,11 @@ pip install -e .
 ```
 We developed and tested Chatterbox on Python 3.11 on Debian 11 OS; the versions of the dependencies are pinned in `pyproject.toml` to ensure consistency. You can modify the code or dependencies in this installation mode.
 
+Verify the installation and download model weights:
+```shell
+python -c "from chatterbox.tts import ChatterboxTTS; model = ChatterboxTTS.from_pretrained(device='cuda'); print('Model loaded OK')"
+```
+
 ## Usage
 
 ##### Chatterbox-Turbo
